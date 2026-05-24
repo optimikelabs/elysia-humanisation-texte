@@ -40,6 +40,66 @@ Le comportement attendu :
 5. faire une passe finale de voix;
 6. retourner le texte et un diagnostic bref.
 
+## Personnaliser la skill
+
+Cette skill est utilisable telle quelle, mais elle peut être adaptée à une voix, une marque ou un contexte métier.
+
+### 1. Adapter le nom
+
+Dans `SKILL.md`, modifier le frontmatter :
+
+```yaml
+name: ma-skill-humanisation
+description: |
+  Humanisation de texte FR-first pour les contenus de mon équipe.
+```
+
+### 2. Ajuster le registre par défaut
+
+Dans `references/register-gate.md`, ajouter ou modifier un registre :
+
+```md
+### Marque sobre
+Pour : emails client, pages de service, documentation publique.
+Faire : phrases courtes, verbes concrets, ton direct.
+Éviter : humour forcé, effets de style, promesse vague.
+```
+
+### 3. Ajouter les termes métier à protéger
+
+Dans `references/technical-protection.md`, compléter les termes hybrides ou les zones protégées :
+
+```md
+- `workspace_id`, `billing_status`, `sync_token`, `retry_after`;
+- noms de workflows, endpoints, tables, champs et flags internes.
+```
+
+### 4. Remplacer les canaris
+
+Dans `references/real-corpus-canaries.md`, remplacer les exemples anonymisés par 3 à 5 cas représentatifs de votre usage :
+
+```md
+## API produit
+Tokens à préserver :
+- `POST /v1/projects`
+- `project_id`
+- `status=archived`
+- `retry_count < 3`
+
+Risque testé :
+- rendre le texte plus naturel en perdant un champ ou une valeur exacte.
+```
+
+### 5. Changer le niveau de diagnostic
+
+Dans `references/output-contract.md`, ajuster le format de sortie :
+
+```md
+Si l'utilisateur veut seulement le texte :
+- donner uniquement `texte_rewrite`;
+- ne pas expliquer les changements.
+```
+
 ## Décision de version
 
 `3.3.0` ajoute des canaris techniques rejouables :
