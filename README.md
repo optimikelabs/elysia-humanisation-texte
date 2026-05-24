@@ -1,10 +1,8 @@
-# ÉLYSIA — Humanisation de texte
+# Humanisation de texte
 
 Skill locale d'édition qui retire les marques d'écriture IA. La version active est **FR-first** : le français est le mode par défaut, l'anglais reste disponible en fallback.
 
-Nom canonique : `elysia-humanisation-texte`.
-
-Ancien nom : `humanizer`.
+Nom canonique : `humanisation-texte`.
 
 ## Source runtime
 
@@ -22,7 +20,7 @@ La profondeur vit dans `references/` :
 - `en-patterns-legacy.md` : couverture anglaise héritée.
 - `output-contract.md` : forme de sortie attendue.
 - `test-cases.md` : cas de validation.
-- `real-corpus-canaries.md` : canaris techniques dérivés de notes réelles du coffre.
+- `real-corpus-canaries.md` : canaris techniques génériques.
 
 ## Usage
 
@@ -44,14 +42,14 @@ Le comportement attendu :
 
 ## Décision de version
 
-`3.3.0` ajoute des canaris réels rejouables :
+`3.3.0` ajoute des canaris techniques rejouables :
 
-- Rize CLI;
-- WordPress MCP / GMA;
-- MX Linking n8n;
-- Smart Search MCP.
+- CLI/API;
+- MCP / JSON-RPC;
+- workflow d'automatisation;
+- configuration d'outil local.
 
-`3.2.1` ajoute un garde-fou issu d'un test Rize CLI réel :
+`3.2.1` ajoute un garde-fou issu d'un test technique :
 
 - ne pas résumer une liste de commandes, options, endpoints ou capacités quand l'exhaustivité sert le diagnostic;
 - vérifier qu'aucun item technique ne disparaît pendant la passe d'humanisation.
@@ -73,8 +71,7 @@ Le comportement attendu :
 
 `3.0.0` marque la refonte FR-first et le renommage canonique :
 
-- `elysia-humanisation-texte` devient le nom canonique;
-- `humanizer` reste seulement un ancien nom utile pour comprendre l'historique;
+- `humanisation-texte` devient le nom canonique;
 - ancien monolithe anglais -> skill graph;
 - français par défaut;
 - Boileau utilisé comme inspiration, pas comme copie brute;
@@ -86,15 +83,15 @@ Le comportement attendu :
 - Boileau : `https://github.com/alxbd/boileau`
 - Wikipedia Signs of AI writing : `https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing`
 
-## Origines et note de suivi
+## Origines
 
-La skill possède une note de suivi locale dans le coffre ÉLYSIA :
+Cette skill s'inspire de plusieurs signaux publics et de tests d'usage réels :
 
-- Obsidian : `obsidian://open?vault=%C3%89LYSIA&file=Efforts%2FProjets%2FInternes%2FProjet%20%C3%89lysia%2FSuivi%20%E2%80%94%20Skill%20elysia-humanisation-texte`
-- Chemin Windows : `F:\OBSIDIAN\ÉLYSIA\Efforts\Projets\Internes\Projet Élysia\Suivi — Skill elysia-humanisation-texte.md`
-
-Origines documentées : besoin interne ÉLYSIA, ancien usage `humanizer`, signaux `collectifweb/claude-skills/humanize`, détecteur Babeleur, puis reconstruction ÉLYSIA-native via `elysia-skill-forge`.
+- patterns français anti-marques IA inspirés de Boileau;
+- signaux `collectifweb/claude-skills/humanize`;
+- détecteur Babeleur comme corpus de tics, sans en faire une métrique de score;
+- tests techniques anonymisés pour éviter de casser les commandes, URLs, champs, flags et valeurs de configuration.
 
 ## Notes
 
-Ne pas synchroniser automatiquement cette version vers d'autres runtimes sans test dédié. La source active locale est `C:\Users\micka\.agents\skills\elysia-humanisation-texte`.
+Ne pas synchroniser automatiquement cette version vers d'autres runtimes sans test dédié.

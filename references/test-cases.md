@@ -1,6 +1,6 @@
 # Cas tests
 
-## 1. Marketing Optimike
+## 1. Marketing
 Doit retirer : adjectifs creux, promesse générique, verbes vides.
 Doit préserver : autorité, clarté, niveau pro.
 
@@ -12,9 +12,9 @@ Doit préserver : tension, angle, phrase qui accroche.
 Doit retirer : servilité, "avec plaisir", "n'hésitez pas", faux enthousiasme.
 Doit préserver : chaleur, précision, relation.
 
-## 4. Note stratégique ÉLYSIA
+## 4. Note stratégique
 Doit retirer : posture de prof, méta-annonces, auto-validation rhétorique.
-Doit préserver : pensée vivante, nuances, vocabulaire ÉLYSIA utile.
+Doit préserver : pensée vivante, nuances, vocabulaire métier utile.
 
 ## 5. Paragraphe technique
 Doit retirer : calques anglais inutiles, flou, sur-promesse.

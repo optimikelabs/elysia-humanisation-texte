@@ -10,8 +10,8 @@ Pour : emails client, documents commerciaux, pages de service, synthèses.
 Faire : phrases claires, verbes concrets, peu d'effets.
 Éviter : `ça pique`, punchlines, humour forcé, lyrisme.
 
-### Stratégique Mike
-Pour : notes ÉLYSIA, réflexion, positionnement, arbitrage.
+### Stratégique
+Pour : notes de réflexion, positionnement, arbitrage.
 Faire : direct, précis, vivant, avec un peu de tension.
 Éviter : professoral, manifeste automatique, triades héroïques.
 

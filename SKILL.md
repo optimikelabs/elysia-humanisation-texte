@@ -1,22 +1,22 @@
 ---
-name: elysia-humanisation-texte
+name: humanisation-texte
 version: 3.3.0
 description: |
-  Humanisation de texte FR-first pour ÉLYSIA. À utiliser quand Mike demande
+  Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
   d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
   "fait ChatGPT", paraît trop corporate, trop professoral, trop soutenu, trop
-  familier, trop lisse ou trop générique. Ancien nom : humanizer.
-tags: [elysia, humanisation, texte, voix, francais, copy, boileau, anti-ia]
+  familier, trop lisse ou trop générique.
+tags: [humanisation, texte, voix, francais, copy, boileau, anti-ia]
 allowed-tools: [Read, Write, Edit, Grep, Glob, AskUserQuestion]
 compatibility: Agent Skills compatible; French-first writing editor with English fallback.
 metadata:
   skill_structure: graph
   theme: marketing-growth
   subtheme: copy
-  portability_class: personal/local
+  portability_class: portable
   default_language: fr
   reference_gate: true
-  aliases: [humanizer, humanisation-texte, humanisation texte, humanisation, texte humain, anti-tics IA, anti ChatGPT, Boileau]
+  aliases: [humanisation-texte, humanisation texte, humanisation, texte humain, anti-tics IA, anti ChatGPT, Boileau]
 ---
 
 # Skill — Humanisation de texte
@@ -27,18 +27,18 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 - Français par défaut.
 - Anglais seulement si le texte est majoritairement anglais ou si l'utilisateur le demande.
 - Ne pas rendre un texte pro artificiellement familier.
-- Ne pas lisser la voix de Mike, d'une marque ou d'un client.
+- Ne pas lisser la voix de l'auteur, d'une marque ou d'un client.
 - Ne pas inventer de faits pour rendre le texte plus concret.
 
 ## Quand l'utiliser
 - L'utilisateur demande d'humaniser, relire, nettoyer, rendre naturel, retirer les tics IA, "ça sonne ChatGPT", "ça fait IA".
-- L'utilisateur mentionne `humanizer` comme ancien nom, `humanisation`, `anti-tics IA`, `Boileau`, `texte trop IA`, `rends ça plus humain`, `moins ChatGPT`.
+- L'utilisateur mentionne `humanisation`, `anti-tics IA`, `Boileau`, `texte trop IA`, `rends ça plus humain`, `moins ChatGPT`.
 - Le texte final est une page, un post X, un email, une note stratégique, une page SEO, un document commercial ou un paragraphe technique.
 - Une autre skill produit un brouillon et il faut une passe finale de voix.
 
 ## Quand ne pas l'utiliser
 - Correction orthographique simple sans enjeu de voix.
-- Rewriting SEO ou copy complet : utiliser d'abord la skill spécialisée, puis `elysia-humanisation-texte`.
+- Rewriting SEO ou copy complet : utiliser d'abord la skill spécialisée, puis `humanisation-texte`.
 - Texte juridique, médical ou financier sensible : préserver les formulations prudentes et signaler si une humanisation peut changer le sens.
 
 ## Navigation

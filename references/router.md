@@ -60,7 +60,7 @@ Règles :
 Sortie autorisée : oui, mais la meilleure sortie peut être quasi inchangée.
 
 ## Route audit anti-tics
-Utiliser si Mike demande explicitement un audit, un score, une détection de tics IA, ou si le texte est long et visiblement généré.
+Utiliser si l'utilisateur demande explicitement un audit, un score, une détection de tics IA, ou si le texte est long et visiblement généré.
 
 Règles :
 - le score reste optionnel et diagnostic;
