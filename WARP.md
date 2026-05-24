@@ -4,7 +4,7 @@ Guidance pour maintenir cette skill.
 
 ## Ce que c'est
 
-`humanisation-texte` est une skill Agent Skills en Markdown. Depuis `3.0.0`, elle est FR-first et structurée en skill graph.
+`elysia-humanisation-texte` est une skill Agent Skills en Markdown. Depuis `3.0.0`, elle est FR-first et structurée en skill graph.
 
 ## Source de vérité
 
@@ -19,7 +19,7 @@ Ne pas recréer un gros monolithe dans `SKILL.md`. Si un comportement grossit, l
 - Le français reste le défaut.
 - L'anglais reste un fallback, pas le centre.
 - Boileau est une inspiration externe, pas une seconde vérité.
-- Le nom canonique reste `humanisation-texte`.
+- Le nom canonique reste `elysia-humanisation-texte`.
 - Toute modification du frontmatter doit rester YAML valide.
 - Après patch : valider YAML, liens de références, puis dry-run sur les cas de `references/test-cases.md`.
 

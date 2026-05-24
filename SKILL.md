@@ -1,13 +1,30 @@
 ---
-name: humanisation-texte
+name: elysia-humanisation-texte
 version: 3.3.0
-description: |
-  Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
-  d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
+description: 'Humanisation de texte FR-first. À utiliser quand l''utilisateur demande
+
+  d''humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
+
   "fait ChatGPT", paraît trop corporate, trop professoral, trop soutenu, trop
+
   familier, trop lisse ou trop générique.
-tags: [humanisation, texte, voix, francais, copy, boileau, anti-ia]
-allowed-tools: [Read, Write, Edit, Grep, Glob, AskUserQuestion]
+
+  '
+tags:
+- humanisation
+- texte
+- voix
+- francais
+- copy
+- boileau
+- anti-ia
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
+- AskUserQuestion
 compatibility: Agent Skills compatible; French-first writing editor with English fallback.
 metadata:
   skill_structure: graph
@@ -16,7 +33,14 @@ metadata:
   portability_class: portable
   default_language: fr
   reference_gate: true
-  aliases: [humanisation-texte, humanisation texte, humanisation, texte humain, anti-tics IA, anti ChatGPT, Boileau]
+  aliases:
+  - humanisation-texte
+  - humanisation texte
+  - humanisation
+  - texte humain
+  - anti-tics IA
+  - anti ChatGPT
+  - Boileau
 ---
 
 # Skill — Humanisation de texte
@@ -38,7 +62,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 
 ## Quand ne pas l'utiliser
 - Correction orthographique simple sans enjeu de voix.
-- Rewriting SEO ou copy complet : utiliser d'abord la skill spécialisée, puis `humanisation-texte`.
+- Rewriting SEO ou copy complet : utiliser d'abord la skill spécialisée, puis `elysia-humanisation-texte`.
 - Texte juridique, médical ou financier sensible : préserver les formulations prudentes et signaler si une humanisation peut changer le sens.
 
 ## Navigation
@@ -52,7 +76,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 - Anglais / legacy : [references/en-patterns-legacy.md](references/en-patterns-legacy.md).
 - Sortie attendue : [references/output-contract.md](references/output-contract.md).
 - Tests : [references/test-cases.md](references/test-cases.md).
-- Canaris réels : [references/real-corpus-canaries.md](references/real-corpus-canaries.md).
+- Canaris techniques : [references/real-corpus-canaries.md](references/real-corpus-canaries.md).
 
 ## Routage rapide
 - texte français final -> ouvrir `router.md`, `fr-first.md`, `register-gate.md`, `fr-patterns-boileau.md`, `typography-fr.md`, `voice-pass.md`.

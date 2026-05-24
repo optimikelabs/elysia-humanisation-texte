@@ -2,7 +2,7 @@
 
 Skill locale d'édition qui retire les marques d'écriture IA. La version active est **FR-first** : le français est le mode par défaut, l'anglais reste disponible en fallback.
 
-Nom canonique : `humanisation-texte`.
+Nom canonique : `elysia-humanisation-texte`.
 
 ## Source runtime
 
@@ -20,7 +20,7 @@ La profondeur vit dans `references/` :
 - `en-patterns-legacy.md` : couverture anglaise héritée.
 - `output-contract.md` : forme de sortie attendue.
 - `test-cases.md` : cas de validation.
-- `real-corpus-canaries.md` : canaris techniques génériques.
+- `real-corpus-canaries.md` : canaris techniques anonymisés.
 
 ## Usage
 
@@ -71,7 +71,7 @@ Le comportement attendu :
 
 `3.0.0` marque la refonte FR-first et le renommage canonique :
 
-- `humanisation-texte` devient le nom canonique;
+- `elysia-humanisation-texte` devient le nom canonique;
 - ancien monolithe anglais -> skill graph;
 - français par défaut;
 - Boileau utilisé comme inspiration, pas comme copie brute;
