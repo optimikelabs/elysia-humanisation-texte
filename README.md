@@ -44,6 +44,30 @@ Le comportement attendu :
 
 Cette skill est utilisable telle quelle, mais elle peut être adaptée à une voix, une marque ou un contexte métier.
 
+### Comprendre le skill graph
+
+La skill est organisée en deux couches :
+
+- `SKILL.md` : point d'entrée runtime. Il doit rester court, activable et orienter l'agent vers les bons modules.
+- `references/` : modules de profondeur. Chaque fichier porte une décision spécialisée : registre, typographie, protection technique, contrat de sortie, cas tests.
+
+Quand vous personnalisez la skill, évitez de tout remettre dans `SKILL.md`. La bonne règle :
+
+- nouveau déclencheur ou nouvelle route générale -> modifier `SKILL.md`;
+- nouvelle règle de style ou de registre -> modifier `references/register-gate.md`;
+- nouveaux tics ou patterns d'écriture -> modifier `references/fr-patterns-boileau.md` ou `references/en-patterns-legacy.md`;
+- nouveaux termes métier à préserver -> modifier `references/technical-protection.md`;
+- nouvelle forme de sortie -> modifier `references/output-contract.md`;
+- nouveaux tests de non-régression -> modifier `references/test-cases.md` ou `references/real-corpus-canaries.md`.
+
+Après modification, vérifiez au minimum :
+
+1. Le frontmatter YAML de `SKILL.md` reste valide.
+2. Tous les liens `references/...` cités dans `SKILL.md` existent.
+3. Chaque route importante du `SKILL.md` pointe vers au moins une référence.
+4. Un texte technique conserve ses commandes, URLs, champs, flags et valeurs exactes.
+5. Un texte déjà naturel peut rester presque inchangé.
+
 ### 1. Adapter le nom
 
 Dans `SKILL.md`, modifier le frontmatter :
