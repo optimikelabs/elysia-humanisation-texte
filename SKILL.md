@@ -1,30 +1,13 @@
 ---
 name: elysia-humanisation-texte
-version: 3.3.0
-description: 'Humanisation de texte FR-first. À utiliser quand l''utilisateur demande
-
-  d''humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
-
+version: 3.3.1
+description: |
+  Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
+  d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
   "fait ChatGPT", paraît trop corporate, trop professoral, trop soutenu, trop
-
-  familier, trop lisse ou trop générique.
-
-  '
-tags:
-- humanisation
-- texte
-- voix
-- francais
-- copy
-- boileau
-- anti-ia
-allowed-tools:
-- Read
-- Write
-- Edit
-- Grep
-- Glob
-- AskUserQuestion
+  familier, trop lisse ou trop générique. Ancien nom : humanizer.
+tags: [elysia, humanisation, texte, voix, francais, copy, boileau, anti-ia]
+allowed-tools: [Read, Write, Edit, Grep, Glob, AskUserQuestion]
 compatibility: Agent Skills compatible; French-first writing editor with English fallback.
 metadata:
   skill_structure: graph
@@ -33,14 +16,7 @@ metadata:
   portability_class: portable
   default_language: fr
   reference_gate: true
-  aliases:
-  - humanisation-texte
-  - humanisation texte
-  - humanisation
-  - texte humain
-  - anti-tics IA
-  - anti ChatGPT
-  - Boileau
+  aliases: [humanizer, humanisation-texte, humanisation texte, humanisation, texte humain, anti-tics IA, anti ChatGPT, Boileau]
 ---
 
 # Skill — Humanisation de texte
@@ -56,7 +32,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 
 ## Quand l'utiliser
 - L'utilisateur demande d'humaniser, relire, nettoyer, rendre naturel, retirer les tics IA, "ça sonne ChatGPT", "ça fait IA".
-- L'utilisateur mentionne `humanisation`, `anti-tics IA`, `Boileau`, `texte trop IA`, `rends ça plus humain`, `moins ChatGPT`.
+- L'utilisateur mentionne `humanizer` comme ancien nom, `humanisation`, `anti-tics IA`, `Boileau`, `texte trop IA`, `rends ça plus humain`, `moins ChatGPT`.
 - Le texte final est une page, un post X, un email, une note stratégique, une page SEO, un document commercial ou un paragraphe technique.
 - Une autre skill produit un brouillon et il faut une passe finale de voix.
 

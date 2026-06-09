@@ -126,6 +126,12 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
+`3.3.1` ajoute un garde-fou sur le parallélisme négatif court :
+
+- détecter les cadences sociales très reconnaissables comme `Pas X. Y.` ou `Ce n'est pas juste X. C'est Y.`;
+- conserver l'opposition seulement quand elle tranche vraiment une idée;
+- dire directement le point quand l'opposition est décorative.
+
 `3.3.0` ajoute des canaris techniques rejouables :
 
 - CLI/API;

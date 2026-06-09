@@ -69,7 +69,11 @@ Correction : préférer la coordination simple et le déroulé naturel.
 ### Parallélisme négatif
 Signaux : `ce n'est pas X, c'est Y`, `il ne s'agit pas de... il s'agit de...`.
 
-Correction : formuler positivement, sauf si l'opposition est une vraie intention rhétorique.
+Signaux sociaux courts : `Pas X. Y.`, `Pas le plus X. Le plus Y.`, `Ce n'est pas juste X. C'est Y.`
+
+Risque : cadence devenue très reconnaissable dans les textes IA, surtout quand l'opposition est décorative.
+
+Correction : garder l'opposition seulement si elle tranche vraiment une idée; sinon dire directement le point.
 
 ### Anaphores marketing
 Signaux : `Pour celles qui...`, `Parce que...` répété, `Plus de X. Plus de Y.`
