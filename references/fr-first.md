@@ -19,6 +19,7 @@ Un bon texte humanisé en français :
 - dit les choses plus directement;
 - garde le niveau de langue adapté;
 - remplace les adjectifs vagues par des faits quand ils existent;
+- rend concret seulement avec un élément déjà présent ou fourni, jamais avec une scène inventée;
 - coupe les préambules IA;
 - garde les aspérités utiles;
 - ne transforme pas tout en conversation de café.

@@ -38,10 +38,13 @@ Le diagnostic doit rester utile :
 - pas de liste exhaustive si elle ralentit la lecture;
 - nommer le risque principal : trop IA, trop soutenu, trop familier, trop vague, trop promotionnel, trop professoral.
 - ne pas afficher de score par défaut; si un score est utile, le présenter comme signal d'audit et non comme vérité.
+- ne pas annoncer de comptage, pourcentage, nombre de passes ou comparaison avant/après sans mesure réelle; préférer un diagnostic qualitatif si ce n'est pas mesuré.
+- ne pas insérer de note de traitement, bandeau `version éditée`, diagnostic ou métadonnée dans le texte final sauf demande explicite.
 
 ## Interdits
 - Ne pas dire que le texte est "désormais parfaitement humain".
 - Ne pas humilier le brouillon.
 - Ne pas ajouter des faits.
+- Ne pas inventer une scène, anecdote, durée, personne, lieu ou exemple pour rendre l'ouverture plus vivante.
 - Ne pas changer l'intention commerciale, stratégique ou relationnelle sans le signaler.
 - Ne pas promettre qu'un texte devient indétectable par un détecteur IA.

@@ -118,3 +118,13 @@ Entrée typique : document avec frontmatter, `Draft Final`, `Notes éditoriales`
 Doit isoler : le bloc `Draft Final`, `Version recommandée` ou le bloc demandé.
 Doit préserver : frontmatter, URLs, score, notes éditoriales, tâches, archives, trace publiée et fautes exactes d'une version déjà publiée.
 Doit éviter : réécrire toute la note, corriger silencieusement une archive publiée, afficher un score interne ou transformer les labels éditoriaux en contenu final.
+
+## 18. Concrétisation inventée
+Entrée typique : ouverture générale du type `Quand un dirigeant commence à s'intéresser à l'IA...`.
+Doit préserver : le niveau de généralité si aucune scène, personne, rendez-vous ou contexte concret n'est fourni.
+Doit éviter : inventer une scène (`Premier rendez-vous...`), un lieu, une durée, un personnage ou une anecdote pour rendre le texte plus vivant.
+
+## 19. Diagnostic mesuré
+Entrée typique : sortie longue avec diagnostic optionnel après réécriture.
+Doit préserver : diagnostic court, séparé du texte final, sans bandeau éditorial ajouté au contenu.
+Doit éviter : annoncer des comptages, pourcentages, nombres de passes ou réductions avant/après si ces mesures n'ont pas été réellement vérifiées.

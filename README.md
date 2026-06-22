@@ -127,6 +127,12 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
+`3.4.6` ajoute deux canaris issus d'un test long-form réel :
+
+- ne pas transformer une formulation générale en scène, anecdote ou exemple concret si ce matériau n'est pas fourni;
+- ne pas annoncer de comptages, pourcentages, nombres de passes ou comparaisons avant/après dans le diagnostic sans mesure réelle;
+- garder le diagnostic séparé du texte final, sans bandeau de traitement ajouté au contenu publiable.
+
 `3.4.5` ajoute des canaris anti-faux-positifs sur les rythmes humains courts :
 
 - règle mère : un pattern n'est pas un tic tant qu'il remplit une fonction lisible;
