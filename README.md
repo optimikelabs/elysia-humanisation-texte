@@ -41,6 +41,34 @@ Le comportement attendu :
 5. faire une passe finale de voix;
 6. retourner le texte et un diagnostic bref.
 
+## Échantillon de voix
+
+Si vous fournissez un extrait de voix, la skill doit le lire avant de réécrire. C'est utile pour préserver le style d'un auteur, d'une marque ou d'une équipe.
+
+Format conseillé :
+
+```md
+Échantillon de voix :
+"""
+Collez ici un ou plusieurs textes représentatifs.
+"""
+
+Texte à humaniser :
+"""
+Collez ici le brouillon à reprendre.
+"""
+```
+
+Un bon échantillon montre :
+
+- le rythme naturel des phrases;
+- le niveau de vocabulaire;
+- les transitions ou sauts directs;
+- la ponctuation et les parenthèses;
+- les répétitions, tics personnels et aspérités utiles.
+
+La skill ne copie pas l'échantillon mot pour mot. Elle s'en sert pour remplacer les tics IA par les patterns de l'auteur, éviter le naturel générique et ne pas lisser une voix déjà forte.
+
 ## Personnaliser la skill
 
 Cette skill est utilisable telle quelle, mais elle peut être adaptée à une voix, une marque ou un contexte métier.
