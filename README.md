@@ -127,11 +127,14 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
-`3.4.3` adapte la version publique aux usages hors contexte local :
+`3.4.3` clarifie la version publique pour des utilisateurs qui n'ont pas le contexte local d'origine :
 
-- remplacer les exemples trop spécifiques par des documents Markdown, brouillons éditoriaux, posts sociaux et traces de publication génériques;
-- garder le nom du package `elysia-humanisation-texte`, mais retirer les hypothèses de coffre, outil de notes ou méthode locale;
-- conserver les canaris anonymisés et le comportement de frontière de source.
+- retire les hypothèses liées à un coffre, une machine de publication, un outil de notes ou une méthode personnelle;
+- remplace les cas trop spécifiques par des cas portables : document Markdown complet, brouillon éditorial, post social, newsletter courte, archive publiée, trace de publication;
+- généralise les marqueurs de publication : `published`, `publication`, `published_url`, `source_url`, `url`, au lieu de champs propres à un workflow précis;
+- renomme les zones protégées en termes réutilisables : `Brief`, `Notes éditoriales`, `Performance`, `Analytics`, `Checklist`, `Tasks`;
+- conserve le comportement important de `3.4.2` : isoler le bloc éditable avant réécriture, préserver frontmatter/URLs/archives/scores/tâches, et ne pas corriger silencieusement une version déjà publiée;
+- garde le nom du package `elysia-humanisation-texte`, mais rend les exemples, canaris et routes utilisables dans n'importe quel repo de contenus Markdown.
 
 `3.4.2` ajoute un garde-fou sur les documents Markdown complets :
 
