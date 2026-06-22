@@ -51,3 +51,30 @@ Doit préserver : prudence, nuances, conditions, limites. Sortie agressive inter
 Entrée typique : texte déjà naturel, précis, court et adapté.
 Doit retirer : rien si les corrections seraient cosmétiques.
 Doit préserver : voix, rythme, aspérités utiles.
+
+## 12. Échantillon de voix
+Doit utiliser le sample pour calibrer rythme, vocabulaire, transitions et aspérités.
+Doit éviter : naturel générique, voix trop lissée.
+
+## 13. Faux positif humain
+Entrée typique : texte propre, formel, avec un tiret ou une transition isolée.
+Doit préserver : style si aucun cluster IA n'apparaît.
+
+## 14. Cadence moderne IA
+Doit retirer : punchlines manufacturées, faux aphorismes, fausses confidences, staccato décoratif.
+Doit préserver : tension réelle et phrase courte utile.
+
+## 15. Score interne invisible
+Doit utiliser le score seulement si utile au diagnostic.
+Doit préserver : aucune note chiffrée en sortie normale.
+
+## 16. Canaris techniques
+Doit rejouer `real-corpus-canaries.md`.
+Doit préserver : tokens, URLs, flags, listes et valeurs exactes.
+Doit retirer seulement autour des tokens : punchlines, aphorismes, fausses confidences et métaphores inutiles.
+
+## 17. Note Post X / Markdown complete
+Entrée typique : note avec frontmatter, `Draft Final`, `Méta-Analyse`, `Runtime`, `Performance`, archives et parfois `statut_creation: publié`.
+Doit isoler : le bloc `Draft Final`, `Version recommandée` ou le bloc demandé.
+Doit préserver : frontmatter, URLs, score, runtime, tâches, archives, trace publiée et fautes exactes d'une version déjà publiée.
+Doit éviter : réécrire toute la note, corriger silencieusement une archive publiée, afficher un score interne ou transformer les labels éditoriaux en contenu final.

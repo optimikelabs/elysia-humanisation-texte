@@ -10,13 +10,14 @@ Le fichier qui fait foi pour l'agent est `SKILL.md`.
 
 La profondeur vit dans `references/` :
 
-- `router.md` : route FR / anglais / technique / sensible / no-op / audit anti-tics.
+- `router.md` : route note Markdown / FR / anglais / technique / sensible / no-op / audit anti-tics.
 - `fr-first.md` : règles de base du mode français.
 - `fr-patterns-boileau.md` : patterns français adaptés depuis Boileau.
 - `register-gate.md` : choix du registre et anti-faux naturel.
 - `voice-pass.md` : passe finale "qu'est-ce qui sonne encore IA ?".
 - `typography-fr.md` : finition typographique française, sans casser Markdown/code/URLs.
 - `technical-protection.md` : protection des tokens, champs, nodes, flags et termes système hybrides.
+- `source-boundaries.md` : protection des notes Markdown completes, archives, frontmatter et versions publiees.
 - `en-patterns-legacy.md` : couverture anglaise héritée.
 - `output-contract.md` : forme de sortie attendue.
 - `test-cases.md` : cas de validation.
@@ -126,6 +127,27 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
+`3.4.2` ajoute un garde-fou sur les notes Markdown completes :
+
+- isoler le bloc éditable avant de réécrire une note avec frontmatter, archives ou plusieurs versions;
+- protéger frontmatter, coulisses, scores, tâches, archives, URLs et traces publiées;
+- ne pas corriger silencieusement une version déjà publiée;
+- ajouter des canaris anonymisés pour les notes de posts X / Markdown.
+
+`3.4.1` durcit le routage ajouté en `3.4.0` :
+
+- route explicite pour les échantillons de voix;
+- route technique capable d'utiliser les patterns anti-cadence sur la prose autour des tokens;
+- priorité réaffirmée de `technical-protection.md` quand un pattern stylistique entre en conflit avec un token exact.
+
+`3.4.0` renforce la passe finale de voix :
+
+- calibration par échantillon d'auteur;
+- garde-fou anti-faux-positifs;
+- patterns modernes de cadence IA;
+- checklist finale courte;
+- score interne optionnel non affiché par défaut.
+
 `3.3.1` ajoute un garde-fou sur le parallélisme négatif court :
 
 - détecter les cadences sociales très reconnaissables comme `Pas X. Y.` ou `Ce n'est pas juste X. C'est Y.`;
@@ -172,6 +194,9 @@ Si l'utilisateur veut seulement le texte :
 
 - Boileau : `https://github.com/alxbd/boileau`
 - Wikipedia Signs of AI writing : `https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing`
+- blader/humanizer : `https://github.com/blader/humanizer`
+- stop-slop : `https://github.com/hardikpandya/stop-slop`
+- Humanizer-zh : `https://github.com/op7418/humanizer-zh`
 
 ## Origines
 

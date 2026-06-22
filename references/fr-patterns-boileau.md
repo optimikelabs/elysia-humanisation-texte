@@ -2,6 +2,20 @@
 
 Source d'inspiration : `alxbd/boileau`, skill dédiée au nettoyage des marques IA dans les textes français. Les grilles Babeleur / collectifweb peuvent servir de contre-check. On adapte les patterns utiles; on ne copie aucune source externe comme second canon.
 
+## Garde-fou anti-faux-positifs
+
+Ne pas corriger un texte seulement parce qu'il est propre, formel, sec, bien ponctué ou bien structuré.
+
+Un signal isolé ne suffit pas. Chercher des clusters : plusieurs tics qui produisent ensemble une cadence IA.
+
+À préserver :
+- détail précis, rare ou difficile à inventer;
+- tension non résolue;
+- asides, parenthèses, auto-corrections utiles;
+- répétition volontaire;
+- mélange de registre cohérent avec l'auteur;
+- phrase courte isolée qui sert vraiment le point.
+
 ## Priorité haute
 
 ### Faux registre soutenu
@@ -50,6 +64,36 @@ Signaux : `soulignant ainsi l'importance de`, `illustrant la pertinence de`, `re
 Correction : couper la queue de phrase ou la transformer en phrase concrète si elle ajoute une information vérifiable.
 
 ## Priorité moyenne
+
+### Cadence manufacturée
+
+Signaux : suite de fragments courts, phrases qui veulent toutes "tomber", morale finale, cadence de punchline.
+
+Correction : garder une phrase courte si elle sert le propos; casser les séries trop parfaites.
+
+### Aphorismes creux
+
+Signaux : `X est le Y de Z`, `X devient un piège`, `le langage de`, `la monnaie de`, `l'architecture de`.
+
+Correction : remplacer la formule par l'idée concrète.
+
+### Fausses confidences
+
+Signaux : `Honnêtement ?`, `Le truc, c'est que`, `Soyons clairs`, `La vraie question`, utilisés comme pause théâtrale.
+
+Correction : dire directement l'idée.
+
+### Écriture ancrée dans le diff
+
+Signaux : texte qui raconte ce qui a changé au lieu de décrire l'état actuel, hors changelog, release note ou migration.
+
+Correction : reformuler comme une vérité stable du document.
+
+### Agency abstraite sans acteur
+
+Signaux : `la décision émerge`, `le marché récompense`, `la culture change`, `la conversation se déplace`.
+
+Correction : nommer l'acteur quand il existe; sinon rester sobre sans inventer.
 
 ### Faux naturel familier
 Signaux : `ça pique`, `ça coince`, `ça gratte`, `ça envoie`, `ça fait le job`, `plutôt cool`, `grosso modo`, `en gros` dans un texte pro.

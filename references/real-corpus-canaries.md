@@ -66,3 +66,16 @@ Risque testé :
 - La prose autour devient plus claire.
 - Aucun score anti-tics n'est affiché si l'utilisateur n'a pas demandé d'audit.
 - Si le texte est déjà clair, la sortie peut être quasi inchangée.
+
+## Notes Markdown / Posts X
+Cas représentatifs :
+- note avec `Draft Final` + `Méta-Analyse` + `Runtime` + `Performance`;
+- note avec plusieurs versions, dont une `Version recommandée`;
+- post déjà publié avec `x_url` et trace de publication;
+- post technique contenant `MCP`, `CLI`, `API`, `JSON` ou une URL.
+
+Risque testé :
+- humaniser toute la note au lieu du post;
+- lisser une voix déjà forte;
+- corriger une trace publiée comme si c'était un brouillon;
+- perdre une URL ou un token technique.

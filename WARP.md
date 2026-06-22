@@ -28,4 +28,4 @@ Ne pas recréer un gros monolithe dans `SKILL.md`. Si un comportement grossit, l
 - YAML de `SKILL.md` parse.
 - Tous les liens `references/*.md` existent.
 - Le routeur mentionne : FR-first, registre, Boileau adapté, passe voix, typographie FR, fallback anglais.
-- Les dry-runs couvrent : marketing FR, post X, email client, note stratégique, technique, créatif, anglais fallback.
+- Les dry-runs couvrent : marketing FR, post X, note Markdown complete, email client, note stratégique, technique, créatif, anglais fallback.
