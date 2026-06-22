@@ -130,8 +130,8 @@ Si l'utilisateur veut seulement le texte :
 `3.4.4` corrige la règle sur les parallélismes négatifs courts :
 
 - ne plus traiter automatiquement `Pas X. Y.` ou `Ce n'est pas juste X. C'est Y.` comme un tic IA;
-- préserver le parallélisme quand il appuie le propos, sert le hook, tranche une vraie distinction ou porte la voix de l'auteur;
-- corriger seulement les parallélismes décoratifs, empilés, interchangeables ou répétés sans nécessité.
+- arbitrer le parallélisme comme un signal faible : le garder s'il porte une vraie distinction, le rythme ou la voix;
+- corriger les parallélismes décoratifs, empilés, interchangeables, répétés sans nécessité ou ajoutés pour donner une fausse profondeur.
 
 `3.4.3` améliore la `3.4.2` publique sans changer le moteur d'humanisation :
 

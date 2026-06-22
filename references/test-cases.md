@@ -66,8 +66,8 @@ Doit préserver : tension réelle et phrase courte utile.
 
 ## 14b. Parallélisme négatif utile
 Entrée typique : `Pas X. Y.` ou `Ce n'est pas juste X. C'est Y.` utilisé comme appui rhétorique dans un post court.
-Doit préserver : le parallélisme s'il tranche une vraie distinction, sert le hook, porte la voix ou renforce le propos.
-Doit retirer : seulement les parallélismes décoratifs, empilés, interchangeables ou répétés sans nécessité.
+Doit préserver : le parallélisme s'il tranche une vraie distinction, sert de phrase-pivot, porte la voix ou renforce vraiment le propos.
+Doit retirer : les parallélismes décoratifs, empilés, interchangeables, répétés sans nécessité ou ajoutés pour donner une fausse profondeur.
 
 ## 15. Score interne invisible
 Doit utiliser le score seulement si utile au diagnostic.
