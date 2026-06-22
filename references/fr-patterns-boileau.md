@@ -115,9 +115,18 @@ Signaux : `ce n'est pas X, c'est Y`, `il ne s'agit pas de... il s'agit de...`.
 
 Signaux sociaux courts : `Pas X. Y.`, `Pas le plus X. Le plus Y.`, `Ce n'est pas juste X. C'est Y.`
 
-Risque : cadence devenue très reconnaissable dans les textes IA, surtout quand l'opposition est décorative.
+Attention : ce signal n'est pas une faute en soi. En post court, il peut être un vrai outil d'appui, de contraste et de voix.
 
-Correction : garder l'opposition seulement si elle tranche vraiment une idée; sinon dire directement le point.
+À préserver par défaut si :
+- l'opposition tranche une vraie distinction;
+- elle sert de phrase-pivot ou de hook;
+- elle appuie le propos par le rythme;
+- elle appartient manifestement à la voix de l'auteur;
+- elle apparaît isolée dans un texte court.
+
+Risque IA : cadence devenue reconnaissable quand l'opposition est décorative, empilée, interchangeable ou répétée sans nécessité.
+
+Correction : ne pas supprimer automatiquement. Garder si l'opposition appuie l'idée; réécrire seulement si le contraste ne change rien, si plusieurs parallélismes s'empilent, ou si le second membre répète juste le premier en plus solennel.
 
 ### Anaphores marketing
 Signaux : `Pour celles qui...`, `Parce que...` répété, `Plus de X. Plus de Y.`

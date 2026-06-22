@@ -1,6 +1,6 @@
 ---
 name: elysia-humanisation-texte
-version: 3.4.3
+version: 3.4.4
 description: |
   Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
   d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
