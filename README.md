@@ -10,14 +10,14 @@ Le fichier qui fait foi pour l'agent est `SKILL.md`.
 
 La profondeur vit dans `references/` :
 
-- `router.md` : route note Markdown / FR / anglais / technique / sensible / no-op / audit anti-tics.
+- `router.md` : route document Markdown / FR / anglais / technique / sensible / no-op / audit anti-tics.
 - `fr-first.md` : règles de base du mode français.
 - `fr-patterns-boileau.md` : patterns français adaptés depuis Boileau.
 - `register-gate.md` : choix du registre et anti-faux naturel.
 - `voice-pass.md` : passe finale "qu'est-ce qui sonne encore IA ?".
 - `typography-fr.md` : finition typographique française, sans casser Markdown/code/URLs.
 - `technical-protection.md` : protection des tokens, champs, nodes, flags et termes système hybrides.
-- `source-boundaries.md` : protection des notes Markdown completes, archives, frontmatter et versions publiees.
+- `source-boundaries.md` : protection des documents Markdown complets, archives, frontmatter et versions publiees.
 - `en-patterns-legacy.md` : couverture anglaise héritée.
 - `output-contract.md` : forme de sortie attendue.
 - `test-cases.md` : cas de validation.
@@ -127,12 +127,18 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
-`3.4.2` ajoute un garde-fou sur les notes Markdown completes :
+`3.4.3` adapte la version publique aux usages hors contexte local :
+
+- remplacer les exemples trop spécifiques par des documents Markdown, brouillons éditoriaux, posts sociaux et traces de publication génériques;
+- garder le nom du package `elysia-humanisation-texte`, mais retirer les hypothèses de coffre, outil de notes ou méthode locale;
+- conserver les canaris anonymisés et le comportement de frontière de source.
+
+`3.4.2` ajoute un garde-fou sur les documents Markdown complets :
 
 - isoler le bloc éditable avant de réécrire une note avec frontmatter, archives ou plusieurs versions;
-- protéger frontmatter, coulisses, scores, tâches, archives, URLs et traces publiées;
+- protéger frontmatter, notes éditoriales, scores, tâches, archives, URLs et traces publiées;
 - ne pas corriger silencieusement une version déjà publiée;
-- ajouter des canaris anonymisés pour les notes de posts X / Markdown.
+- ajouter des canaris anonymisés pour les brouillons éditoriaux / Markdown.
 
 `3.4.1` durcit le routage ajouté en `3.4.0` :
 

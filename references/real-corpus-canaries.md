@@ -67,11 +67,11 @@ Risque testé :
 - Aucun score anti-tics n'est affiché si l'utilisateur n'a pas demandé d'audit.
 - Si le texte est déjà clair, la sortie peut être quasi inchangée.
 
-## Notes Markdown / Posts X
+## Documents Markdown / brouillons éditoriaux
 Cas représentatifs :
-- note avec `Draft Final` + `Méta-Analyse` + `Runtime` + `Performance`;
+- document avec `Draft Final` + `Notes éditoriales` + `Performance` + `Checklist`;
 - note avec plusieurs versions, dont une `Version recommandée`;
-- post déjà publié avec `x_url` et trace de publication;
+- contenu déjà publié avec URL et trace de publication;
 - post technique contenant `MCP`, `CLI`, `API`, `JSON` ou une URL.
 
 Risque testé :

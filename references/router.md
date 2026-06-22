@@ -3,7 +3,7 @@
 ## But
 Choisir la bonne route avant de réécrire. Humaniser n'est pas toujours modifier beaucoup.
 
-## Route note Markdown / archive
+## Route document Markdown / archive
 Utiliser si l'entrée contient du frontmatter, des sections Markdown, plusieurs versions, une trace publiee, une citation ou un bloc source.
 
 Référence minimale :
@@ -11,8 +11,8 @@ Référence minimale :
 
 Règles :
 - isoler le bloc réellement éditable avant d'appliquer une route de style;
-- préserver frontmatter, coulisses, scores, archives, tâches, URLs et traces de publication;
-- si le bloc éditable est un post X français, poursuivre avec `register-gate.md`, `fr-patterns-boileau.md`, `voice-pass.md` et `typography-fr.md`;
+- préserver frontmatter, notes éditoriales, scores, archives, tâches, URLs et traces de publication;
+- si le bloc éditable est un post social français, poursuivre avec `register-gate.md`, `fr-patterns-boileau.md`, `voice-pass.md` et `typography-fr.md`;
 - si le bloc contient des tokens techniques, ouvrir aussi `technical-protection.md`;
 - si la cible éditable reste ambiguë, faire un diagnostic court plutôt qu'une réécriture globale.
 

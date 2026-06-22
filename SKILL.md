@@ -1,12 +1,12 @@
 ---
 name: elysia-humanisation-texte
-version: 3.4.2
+version: 3.4.3
 description: |
   Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
   d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
   "fait ChatGPT", paraît trop corporate, trop professoral, trop soutenu, trop
   familier, trop lisse ou trop générique. Ancien nom : humanizer.
-tags: [elysia, humanisation, texte, voix, francais, copy, boileau, anti-ia]
+tags: [humanisation, texte, voix, francais, copy, boileau, anti-ia]
 allowed-tools: [Read, Write, Edit, Grep, Glob, AskUserQuestion]
 compatibility: Agent Skills compatible; French-first writing editor with English fallback.
 metadata:
@@ -33,7 +33,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 ## Quand l'utiliser
 - L'utilisateur demande d'humaniser, relire, nettoyer, rendre naturel, retirer les tics IA, "ça sonne ChatGPT", "ça fait IA".
 - L'utilisateur mentionne `humanizer` comme ancien nom, `humanisation`, `anti-tics IA`, `Boileau`, `texte trop IA`, `rends ça plus humain`, `moins ChatGPT`.
-- Le texte final est une page, un post X, un email, une note stratégique, une page SEO, un document commercial ou un paragraphe technique.
+- Le texte final est une page, un post social, un email, une note stratégique, une page SEO, un document commercial ou un paragraphe technique.
 - Une autre skill produit un brouillon et il faut une passe finale de voix.
 
 ## Quand ne pas l'utiliser
@@ -58,7 +58,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 ## Routage rapide
 - texte français final -> ouvrir `router.md`, `fr-first.md`, `register-gate.md`, `fr-patterns-boileau.md`, `typography-fr.md`, `voice-pass.md`.
 - texte avec échantillon de voix fourni -> ouvrir `router.md`, `register-gate.md`, `fr-patterns-boileau.md`, `voice-pass.md`.
-- note Markdown complete, post X, archive publiée, frontmatter ou plusieurs versions -> ouvrir `router.md` + `source-boundaries.md`, puis seulement les références de la route du bloc éditable.
+- document Markdown complet, brouillon éditorial, archive publiée, frontmatter ou plusieurs versions -> ouvrir `router.md` + `source-boundaries.md`, puis seulement les références de la route du bloc éditable.
 - texte anglais -> ouvrir `router.md` puis `en-patterns-legacy.md`.
 - texte technique, code, URL, JSON/YAML -> ouvrir `router.md` route technique + `technical-protection.md` + `typography-fr.md`; si la prose autour sonne IA, ouvrir aussi `fr-patterns-boileau.md` + `voice-pass.md` en gardant la protection technique prioritaire.
 - texte juridique, médical, financier ou sensible -> ouvrir `router.md` route sensible; correction minimale.
@@ -87,7 +87,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 - Les listes de commandes, options, capacités ou endpoints ne doivent pas être résumées si l'exhaustivité sert le diagnostic.
 - Les textes juridiques, médicaux, financiers ou sensibles passent en mode prudent : diagnostic et corrections minimales, jamais reformulation agressive.
 - Un texte déjà naturel peut rester presque inchangé; la skill n'a pas à modifier pour prouver qu'elle travaille.
-- Une note Markdown complete n'est pas un texte à humaniser en bloc : frontmatter, coulisses, scores, archives, tâches et versions publiées sont des sources protégées sauf demande explicite.
+- Un document Markdown complet n'est pas un texte à humaniser en bloc : frontmatter, notes éditoriales, scores, archives, tâches et versions publiées sont des sources protégées sauf demande explicite.
 - Le score anti-tics est un outil d'audit optionnel, jamais un objectif visible par défaut.
 - En cas de doute sur le registre, garder un français sobre et direct.
 

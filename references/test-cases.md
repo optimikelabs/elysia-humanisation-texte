@@ -4,7 +4,7 @@
 Doit retirer : adjectifs creux, promesse générique, verbes vides.
 Doit préserver : autorité, clarté, niveau pro.
 
-## 2. Post X
+## 2. Post social
 Doit retirer : anaphores faciles, morale finale, structure trop parfaite.
 Doit préserver : tension, angle, phrase qui accroche.
 
@@ -73,8 +73,8 @@ Doit rejouer `real-corpus-canaries.md`.
 Doit préserver : tokens, URLs, flags, listes et valeurs exactes.
 Doit retirer seulement autour des tokens : punchlines, aphorismes, fausses confidences et métaphores inutiles.
 
-## 17. Note Post X / Markdown complete
-Entrée typique : note avec frontmatter, `Draft Final`, `Méta-Analyse`, `Runtime`, `Performance`, archives et parfois `statut_creation: publié`.
+## 17. Document Markdown complet / brouillon éditorial
+Entrée typique : document avec frontmatter, `Draft Final`, `Notes éditoriales`, `Performance`, archives et parfois une trace de publication.
 Doit isoler : le bloc `Draft Final`, `Version recommandée` ou le bloc demandé.
-Doit préserver : frontmatter, URLs, score, runtime, tâches, archives, trace publiée et fautes exactes d'une version déjà publiée.
+Doit préserver : frontmatter, URLs, score, notes éditoriales, tâches, archives, trace publiée et fautes exactes d'une version déjà publiée.
 Doit éviter : réécrire toute la note, corriger silencieusement une archive publiée, afficher un score interne ou transformer les labels éditoriaux en contenu final.

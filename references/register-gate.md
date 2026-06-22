@@ -15,8 +15,8 @@ Pour : notes de réflexion, positionnement, arbitrage.
 Faire : direct, précis, vivant, avec un peu de tension.
 Éviter : professoral, manifeste automatique, triades héroïques.
 
-### Post X
-Pour : posts courts, angles publics.
+### Post social
+Pour : posts courts, newsletters brèves, replies, angles publics.
 Faire : rythme, compression, tension, une idée nette.
 Éviter : thread cliché, anaphores publicitaires, morale finale.
 
