@@ -127,14 +127,14 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
-`3.4.3` clarifie la version publique pour des utilisateurs qui n'ont pas le contexte local d'origine :
+`3.4.3` améliore la `3.4.2` publique sans changer le moteur d'humanisation :
 
-- retire les hypothèses liées à un coffre, une machine de publication, un outil de notes ou une méthode personnelle;
-- remplace les cas trop spécifiques par des cas portables : document Markdown complet, brouillon éditorial, post social, newsletter courte, archive publiée, trace de publication;
-- généralise les marqueurs de publication : `published`, `publication`, `published_url`, `source_url`, `url`, au lieu de champs propres à un workflow précis;
-- renomme les zones protégées en termes réutilisables : `Brief`, `Notes éditoriales`, `Performance`, `Analytics`, `Checklist`, `Tasks`;
-- conserve le comportement important de `3.4.2` : isoler le bloc éditable avant réécriture, préserver frontmatter/URLs/archives/scores/tâches, et ne pas corriger silencieusement une version déjà publiée;
-- garde le nom du package `elysia-humanisation-texte`, mais rend les exemples, canaris et routes utilisables dans n'importe quel repo de contenus Markdown.
+- rend le garde-fou Markdown de `3.4.2` plus réutilisable hors d'un workflow précis;
+- remplace les cas de test trop typés par des cas publics : document Markdown complet, brouillon éditorial, post social, newsletter courte, archive publiée, trace de publication;
+- généralise les marqueurs de publication à reconnaître : `published`, `publication`, `published_url`, `source_url`, `url`;
+- rend les zones protégées plus lisibles pour un autre repo : `Brief`, `Notes éditoriales`, `Performance`, `Analytics`, `Checklist`, `Tasks`;
+- clarifie que le comportement de `3.4.2` reste le coeur : isoler le bloc éditable avant réécriture, préserver frontmatter/URLs/archives/scores/tâches, et ne pas corriger silencieusement une version déjà publiée;
+- transforme donc `3.4.2` d'une protection correcte mais encore trop contextualisée en une protection directement exploitable dans un repo public de contenus Markdown.
 
 `3.4.2` ajoute un garde-fou sur les documents Markdown complets :
 
