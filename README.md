@@ -127,6 +127,12 @@ Si l'utilisateur veut seulement le texte :
 
 ## Décision de version
 
+`3.4.5` ajoute des canaris anti-faux-positifs sur les rythmes humains courts :
+
+- règle mère : un pattern n'est pas un tic tant qu'il remplit une fonction lisible;
+- protection du staccato utile, de la répétition volontaire, de la fausse confidence orale, de la triade pédagogique, de l'aphorisme-hook, de la typographie sociale et de la métaphore utile;
+- correction limitée aux formes décoratives, empilées, interchangeables, trop régulières ou ajoutées pour donner une fausse profondeur.
+
 `3.4.4` corrige la règle sur les parallélismes négatifs courts :
 
 - ne plus traiter automatiquement `Pas X. Y.` ou `Ce n'est pas juste X. C'est Y.` comme un tic IA;

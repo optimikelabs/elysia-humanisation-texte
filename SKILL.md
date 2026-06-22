@@ -1,6 +1,6 @@
 ---
 name: elysia-humanisation-texte
-version: 3.4.4
+version: 3.4.5
 description: |
   Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
   d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
@@ -88,6 +88,7 @@ Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de reti
 - Les textes juridiques, médicaux, financiers ou sensibles passent en mode prudent : diagnostic et corrections minimales, jamais reformulation agressive.
 - Un texte déjà naturel peut rester presque inchangé; la skill n'a pas à modifier pour prouver qu'elle travaille.
 - Un document Markdown complet n'est pas un texte à humaniser en bloc : frontmatter, notes éditoriales, scores, archives, tâches et versions publiées sont des sources protégées sauf demande explicite.
+- Un pattern visible n'est pas un tic tant qu'il remplit une fonction : contraste, progression, souffle, mémoire, hook, précision ou voix d'auteur.
 - Le score anti-tics est un outil d'audit optionnel, jamais un objectif visible par défaut.
 - En cas de doute sur le registre, garder un français sobre et direct.
 

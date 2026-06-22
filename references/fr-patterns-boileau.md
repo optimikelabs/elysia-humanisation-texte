@@ -8,6 +8,10 @@ Ne pas corriger un texte seulement parce qu'il est propre, formel, sec, bien pon
 
 Un signal isolé ne suffit pas. Chercher des clusters : plusieurs tics qui produisent ensemble une cadence IA.
 
+Règle de fonction : un pattern n'est pas un tic tant qu'il remplit une fonction lisible. Avant de corriger staccato, répétition, triade, aphorisme, fausse confidence, familier ou métaphore, vérifier s'il porte un contraste, une progression, un souffle, une mémoire, un hook, une précision ou une voix d'auteur.
+
+Corriger seulement si la forme remplace l'idée, masque le flou, rend la cadence trop régulière, empile plusieurs effets identiques ou donne une fausse profondeur.
+
 À préserver :
 - détail précis, rare ou difficile à inventer;
 - tension non résolue;
@@ -69,19 +73,25 @@ Correction : couper la queue de phrase ou la transformer en phrase concrète si 
 
 Signaux : suite de fragments courts, phrases qui veulent toutes "tomber", morale finale, cadence de punchline.
 
-Correction : garder une phrase courte si elle sert le propos; casser les séries trop parfaites.
+Garder le staccato s'il crée un silence, un contraste ou un appui réel. Exemple à préserver : `La note est revenue. Pas la pensée.`
+
+Correction : casser seulement les séries trop parfaites, les fins de paragraphe qui cherchent toutes la punchline, ou les fragments ajoutés pour fabriquer de l'intensité.
 
 ### Aphorismes creux
 
 Signaux : `X est le Y de Z`, `X devient un piège`, `le langage de`, `la monnaie de`, `l'architecture de`.
 
-Correction : remplacer la formule par l'idée concrète.
+Garder si la formule condense vraiment l'idée ou sert de hook, puis laisser le texte donner la conséquence concrète.
+
+Correction : remplacer la formule par l'idée concrète si elle sonne juste mais ne dit rien de vérifiable, ne change pas la compréhension, ou remplace l'argument.
 
 ### Fausses confidences
 
 Signaux : `Honnêtement ?`, `Le truc, c'est que`, `Soyons clairs`, `La vraie question`, utilisés comme pause théâtrale.
 
-Correction : dire directement l'idée.
+Garder si la confidence est une vraie oralité, un pivot de voix ou un changement d'angle.
+
+Correction : dire directement l'idée si la formule sert seulement à théâtraliser une phrase faible.
 
 ### Écriture ancrée dans le diff
 
@@ -98,12 +108,16 @@ Correction : nommer l'acteur quand il existe; sinon rester sobre sans inventer.
 ### Faux naturel familier
 Signaux : `ça pique`, `ça coince`, `ça gratte`, `ça envoie`, `ça fait le job`, `plutôt cool`, `grosso modo`, `en gros` dans un texte pro.
 
-Correction : choisir un registre cohérent. Pro sobre par défaut.
+Garder dans un post court ou une voix personnelle si l'expression porte le rythme et reste cohérente avec l'auteur.
+
+Correction : choisir un registre cohérent. Pro sobre par défaut, surtout dans une page, un email client ou un document commercial.
 
 ### Doublets et triades
 Signaux : `simple et intuitif`, `robuste et fiable`, `rapide et efficace`, listes de trois adjectifs abstraits.
 
-Correction : garder le mot utile ou remplacer par une preuve.
+Garder une triade si chaque item ajoute une marche réelle : angle, critère, étape, preuve ou conséquence.
+
+Correction : garder le mot utile ou remplacer par une preuve quand la liste recycle des synonymes ou cherche seulement un rythme ternaire.
 
 ### Structures scolaires
 Signaux : `non seulement... mais aussi`, `tant... que...`, `c'est ainsi que`, plans trop visibles `Défis / Perspectives`, introductions qui annoncent le plan sans dire l'idée.
@@ -126,7 +140,9 @@ Correction : arbitrer selon la fonction réelle dans le passage. Ne pas supprime
 ### Anaphores marketing
 Signaux : `Pour celles qui...`, `Parce que...` répété, `Plus de X. Plus de Y.`
 
-Correction : utiliser ce rythme seulement si c'est une intention de marque claire.
+Garder la répétition volontaire si elle crée une progression, un martèlement utile ou une mémoire de lecture. Exemple : `Pas assez pour écrire. Pas assez pour décider. Pas assez pour relier.`
+
+Correction : utiliser ce rythme seulement si c'est une intention claire; sinon varier, condenser ou couper.
 
 ### Transitions pseudo-journalistiques
 Signaux : `derrière les chiffres se cache`, `plus complexe qu'il n'y paraît`, `en apparence... mais en réalité`.
@@ -137,6 +153,13 @@ Correction : donner directement la nuance.
 Signaux : `promesse murmurée`, `secret brûlant`, `désir vibrant`, `comme si le temps s'était figé`.
 
 Correction : revenir au concret, à l'image juste, ou au silence.
+
+### Métaphores trop propres
+Signaux : image très lisse, analogie trop symétrique, métaphore qui remplace l'idée au lieu de l'éclairer.
+
+Garder si l'image est l'angle du texte, rend l'idée mémorable ou clarifie une tension réelle.
+
+Correction : couper ou expliciter si l'image masque le propos, donne une fausse profondeur ou ressemble à une décoration de surface.
 
 ### Sycophance et importance automatique
 Signaux : présenter un sujet comme `majeur`, `clé`, `essentiel pour l'avenir` uniquement parce que le texte parle de lui.

@@ -69,6 +69,41 @@ Entrée typique : `Pas X. Y.` ou `Ce n'est pas juste X. C'est Y.` utilisé comme
 Doit préserver : le parallélisme s'il tranche une vraie distinction, sert de phrase-pivot, porte la voix ou renforce vraiment le propos.
 Doit retirer : les parallélismes décoratifs, empilés, interchangeables, répétés sans nécessité ou ajoutés pour donner une fausse profondeur.
 
+## 14c. Staccato utile
+Entrée typique : `La note est revenue. Pas la pensée.`
+Doit préserver : phrases très courtes si elles créent un silence, un contraste ou un appui réel.
+Doit retirer : staccato décoratif si toutes les phrases cherchent la punchline.
+
+## 14d. Répétition volontaire utile
+Entrée typique : `Pas assez pour écrire. Pas assez pour décider. Pas assez pour relier.`
+Doit préserver : répétition qui crée progression, martèlement utile ou mémoire de lecture.
+Doit retirer : répétition-gabarit qui recycle la même idée sans progression.
+
+## 14e. Fausse confidence utile
+Entrée typique : `Le truc, c'est que...` utilisé comme vraie oralité ou pivot de voix.
+Doit préserver : la confidence si elle change l'angle ou le rapport au lecteur.
+Doit retirer : pause théâtrale vide avant une idée qui peut être dite directement.
+
+## 14f. Triade utile
+Entrée typique : trois items qui ajoutent chacun un critère, une étape ou une conséquence.
+Doit préserver : triade pédagogique où chaque item ajoute une marche réelle.
+Doit retirer : triade de synonymes abstraits du type `simple, puissant, efficace`.
+
+## 14g. Aphorisme utile
+Entrée typique : formule `X est le Y de Z` qui condense vraiment l'idée du post.
+Doit préserver : aphorisme-hook si la suite donne une conséquence concrète.
+Doit retirer : formule vide qui remplace l'argument.
+
+## 14h. Typographie sociale utile
+Entrée typique : tiret, saut de ligne ou ponctuation imparfaite qui porte le souffle d'un post court.
+Doit préserver : rupture typographique cohérente avec la voix et claire pour le lecteur.
+Doit éviter : normalisation automatique qui lisse une respiration utile.
+
+## 14i. Métaphore utile
+Entrée typique : image qui est l'angle du texte ou rend une tension mémorable.
+Doit préserver : métaphore qui clarifie ou condense une idée réelle.
+Doit retirer : image décorative qui remplace l'idée ou donne une fausse profondeur.
+
 ## 15. Score interne invisible
 Doit utiliser le score seulement si utile au diagnostic.
 Doit préserver : aucune note chiffrée en sortie normale.
