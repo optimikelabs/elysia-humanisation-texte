@@ -4,6 +4,7 @@
 
 Les champs suivants servent à stabiliser le workflow. Ils ne doivent pas être affichés par défaut :
 - `references_ouvertes`;
+- `module_route`;
 - `route_contexte`;
 - `intensite_intervention`;
 - `source_boundary` si nécessaire;
@@ -15,6 +16,7 @@ Les champs suivants servent à stabiliser le workflow. Ils ne doivent pas être 
 - `controle_densite`;
 - `gate_typographique`;
 - `expansion_reason` seulement si une expansion exceptionnelle est conservée.
+- `edit_ledger` seulement si une sortie structurée ou une évaluation l'exige.
 
 Un champ interne n'est pas un bloc à imprimer dans la réponse utilisateur.
 

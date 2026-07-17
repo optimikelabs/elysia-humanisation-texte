@@ -1,6 +1,6 @@
 # Humanisation de texte
 
-Skill d'édition FR-first qui retire les marques d'écriture IA sans réécrire ce qui fonctionne déjà. La version `3.5.0` ajoute un routage séparé par contexte et intensité, un gate zéro cadratin en français et un contrôle de densité pour les textes techniques.
+Skill d'édition FR-first qui retire les marques d'écriture IA sans réécrire ce qui fonctionne déjà. La version `3.5.1` ajoute un routage séparé par contexte et intensité, un gate zéro cadratin en français, un contrôle de densité et une protection explicite des modalités et formulations métier décisionnelles.
 
 Nom canonique : `elysia-humanisation-texte`.
 
@@ -80,6 +80,15 @@ Brouillon à reprendre.
 7. Sortie utilisateur sans état interne ni formatage ajouté.
 
 ## Versions
+
+### 3.5.1
+
+- blocs sains conservés littéralement en retouche ciblée;
+- modalités, conditions cumulatives et formulations métier décisionnelles protégées;
+- contrat Forge restauré avec anti-raccourci et `module_route`;
+- `SKILL.md` ramené sous 100 lignes;
+- harness reproductible dans `tests/`;
+- URL Babeleur corrigée.
 
 ### 3.5.0
 

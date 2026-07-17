@@ -26,6 +26,7 @@ Ne pas modifier :
 - extraits Markdown où le format fait partie de la preuve;
 - valeurs exactes utiles au debug : statuts, flags, ids, versions, seuils et hashes;
 - termes comptables, financiers, juridiques ou réglementaires dont le sens est normé.
+- formulations métier qui portent un critère de décision et qu'un synonyme plus large affaiblirait.
 
 ## Termes hybrides à préserver
 
@@ -71,6 +72,8 @@ Comparer l'avant et l'après :
 - une liste a-t-elle perdu ou gagné un item ?
 - les chemins, URLs, flags et noms de champs sont-ils inchangés ?
 - les conditions, limites et degrés de certitude sont-ils conservés ?
+- les modalités et conditions cumulatives ont-elles gardé la même force ?
+- une formulation métier décisionnelle a-t-elle été remplacée par un terme plus vague ?
 - les paragraphes déjà clairs sont-ils restés stables ?
 - la phrase est-elle plus claire sans être moins exacte ni plus longue sans raison ?
 - la prose française générée respecte-t-elle le gate zéro cadratin ?

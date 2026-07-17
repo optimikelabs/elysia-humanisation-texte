@@ -81,6 +81,12 @@ Attendu :
 - longueur stable ou plus courte;
 - aucune nouvelle affirmation sur le produit ou la conformité.
 
+Invariants de décision à tester :
+- `peut` ne devient pas `doit` ou un présent affirmatif;
+- `uniquement si A et B` conserve les deux conditions;
+- `contrôles à plus forte valeur ajoutée` ne devient pas une formule plus vague comme `contrôles les plus utiles`;
+- `peuvent être exportés` ne devient pas `sont exportés`.
+
 ## Densité et formatage
 
 Entrée : texte technique de plus de 250 mots, sans gras, avec trois passages marqués et plusieurs paragraphes sains.
@@ -105,3 +111,5 @@ Attendu : virgules, parenthèses, deux-points ou point selon la fonction. Aucun 
 - Aucun score anti-tics n'est affiché sans demande.
 - Un passage déjà clair peut rester inchangé.
 - Aucun cadratin non protégé ni nouveau gras n'apparaît dans la sortie française.
+- Les blocs sains restent littéralement inchangés en `retouche_ciblee`.
+- Les modalités, conditions cumulatives et formulations métier décisionnelles gardent la même force.

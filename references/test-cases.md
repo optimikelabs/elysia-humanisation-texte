@@ -255,3 +255,27 @@ Entrée : demande normale de réécriture.
 Doit produire : texte final puis diagnostic bref si utile.
 
 Doit éviter : afficher les champs internes, labels de pipeline ou bandeaux de traitement.
+
+## 36. Modalités et conditions cumulatives
+
+Entrée : texte technique ou sensible contenant `peut`, `doit`, un seuil et `uniquement si A et B`.
+
+Doit préserver : force modale, seuil, négation et toutes les conditions.
+
+Doit éviter : transformer une possibilité en constat, une recommandation en obligation ou supprimer une condition pour raccourcir.
+
+## 37. Formulation métier décisionnelle
+
+Entrée : formulation précise comme `contrôles à plus forte valeur ajoutée` ou `peuvent être exportés`.
+
+Doit préserver : formulation littérale si le synonyme serait plus vague ou changerait la modalité.
+
+Doit éviter : `contrôles les plus utiles`, `sont exportés` ou toute généralisation motivée seulement par la concision.
+
+## 38. Diff minimal par blocs
+
+Entrée : trois paragraphes dont seul le deuxième contient des marqueurs nommés.
+
+Doit préserver : premier et troisième paragraphes littéralement inchangés en `retouche_ciblee`.
+
+Doit modifier : uniquement les segments marqués du deuxième paragraphe.

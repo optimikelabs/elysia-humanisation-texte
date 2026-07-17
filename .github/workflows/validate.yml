@@ -1,0 +1,18 @@
+name: Validate skill
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate package structure
+        run: python tests/validate_package.py
+      - name: Validate reference outputs
+        run: python tests/validate_outputs.py tests/fixtures.json tests/sample-output.json

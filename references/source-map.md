@@ -101,7 +101,7 @@ Rejeté :
 
 ### Babeleur
 
-Source : `https://babeleur.com/detecteur-ecriture-ia`
+Source : `https://babeleur.be/detecteur-tics-ia.html`
 
 Version auditée : `1.2`, datée du 31 mars 2026.
 

@@ -43,6 +43,7 @@ Elle doit rester :
 - `SKILL.md` : description, tags et classe de portabilité;
 - `README.md`;
 - fichier d'intégration runtime locale, privé uniquement;
+- `WARP.md` peut rester public s'il ne contient que la maintenance générique du repo; une version enrichie de chemins, canaris ou conventions privées reste locale;
 - `references/register-gate.md`;
 - `references/source-boundaries.md`;
 - `references/real-corpus-canaries.md`;

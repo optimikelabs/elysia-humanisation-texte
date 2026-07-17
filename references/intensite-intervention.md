@@ -82,6 +82,25 @@ Avant la sortie, vérifier que la version conserve :
 
 Une phrase plus courte qui supprime une condition n'est pas une amélioration.
 
+### Invariants de décision
+
+Pour un texte technique, métier ou sensible, vérifier aussi :
+- la force des modalités : `peut`, `doit`, `devrait`, `interdit`, `uniquement si`;
+- les négations, seuils, périodes, causalités et conditions cumulatives;
+- les formulations métier qui portent un critère de décision;
+- la distinction entre possibilité, obligation, recommandation et constat.
+
+Ne pas remplacer une formulation décisionnelle précise par un synonyme plus général pour gagner quelques mots. La densité se gagne sur le métadiscours, les transitions, l'emphase et les répétitions.
+
+### Diff minimal en retouche ciblée
+
+Classer les blocs en `stable` ou `marque` :
+- un bloc stable reste littéralement inchangé;
+- dans un bloc marqué, ne modifier que les segments associés à un marqueur nommé;
+- une correction sans justification locale est cosmétique et doit être retirée.
+
+Si une sortie structurée ou une évaluation l'exige, conserver un `edit_ledger` interne avec le bloc, le marqueur, le segment source, le segment final et la justification.
+
 ## Budget de densité
 
 Le budget sert de garde-fou, pas de cible stylistique visible.
