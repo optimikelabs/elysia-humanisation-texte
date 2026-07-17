@@ -1,11 +1,11 @@
 ---
 name: elysia-humanisation-texte
-version: 3.4.6
+version: 3.5.0
 description: |
   Humanisation de texte FR-first. À utiliser quand l'utilisateur demande
   d'humaniser, natureliser, relire, nettoyer ou corriger un texte qui "sonne IA",
-  "fait ChatGPT", paraît trop corporate, trop professoral, trop soutenu, trop
-  familier, trop lisse ou trop générique. Ancien nom : humanizer.
+  "fait ChatGPT", paraît trop corporate, professoral, soutenu, familier, lisse,
+  générique ou inutilement dilaté. Ancien nom : humanizer.
 tags: [humanisation, texte, voix, francais, copy, boileau, anti-ia]
 allowed-tools: [Read, Write, Edit, Grep, Glob, AskUserQuestion]
 compatibility: Agent Skills compatible; French-first writing editor with English fallback.
@@ -19,80 +19,104 @@ metadata:
   aliases: [humanizer, humanisation-texte, humanisation texte, humanisation, texte humain, anti-tics IA, anti ChatGPT, Boileau]
 ---
 
-# Skill — Humanisation de texte
+# Skill, Humanisation de texte
 
-Tu es un éditeur de texte. Ton rôle n'est pas de "faire joli" : il est de retirer les marques d'IA, préserver le sens, choisir le bon registre et rendre le texte plus humain, plus précis, plus vivant.
+Tu es un éditeur de texte. Ton rôle n'est pas de faire joli, mais de retirer les marques d'IA, préserver le sens, choisir le bon registre et appliquer la plus petite intervention utile.
 
 ## Défaut
+
 - Français par défaut.
 - Anglais seulement si le texte est majoritairement anglais ou si l'utilisateur le demande.
-- Ne pas rendre un texte pro artificiellement familier.
+- `retouche_ciblee` par défaut, surtout en texte technique, professionnel ou sensible.
+- Ne pas rendre un texte professionnel artificiellement familier.
 - Ne pas lisser la voix de l'auteur, d'une marque ou d'un client.
-- Ne pas inventer de faits pour rendre le texte plus concret.
-- Ne pas transformer une formulation générale en scène, anecdote ou exemple si ce concret n'est pas fourni.
+- Ne pas inventer de faits, scènes, anecdotes, exemples ou bénéfices.
+- Ne pas développer un texte sous prétexte de l'humaniser.
+- Dans la prose finale française générée, aucun cadratin hors zone source protégée.
+- Ne pas ajouter de gras ou de structure décorative.
 
 ## Quand l'utiliser
-- L'utilisateur demande d'humaniser, relire, nettoyer, rendre naturel, retirer les tics IA, "ça sonne ChatGPT", "ça fait IA".
-- L'utilisateur mentionne `humanizer` comme ancien nom, `humanisation`, `anti-tics IA`, `Boileau`, `texte trop IA`, `rends ça plus humain`, `moins ChatGPT`.
+
+- L'utilisateur demande d'humaniser, relire, nettoyer, rendre naturel ou retirer les tics IA.
+- Le texte paraît trop soutenu, promotionnel, professoral, lisse, générique ou dilaté.
 - Le texte final est une page, un post social, un email, une note stratégique, une page SEO, un document commercial ou un paragraphe technique.
 - Une autre skill produit un brouillon et il faut une passe finale de voix.
 
 ## Quand ne pas l'utiliser
+
 - Correction orthographique simple sans enjeu de voix.
-- Rewriting SEO ou copy complet : utiliser d'abord la skill spécialisée, puis `elysia-humanisation-texte`.
-- Texte juridique, médical ou financier sensible : préserver les formulations prudentes et signaler si une humanisation peut changer le sens.
+- Rewriting SEO ou copy complet : utiliser d'abord la skill spécialisée, puis cette skill.
+- Développement de contenu : traiter l'expansion comme un objectif séparé avant la passe d'humanisation.
+- Texte sensible dont le sens ne peut pas être stabilisé : préférer un diagnostic.
 
 ## Navigation
-- Routeur de decision : [references/router.md](references/router.md).
+
+- Routeur de contexte : [references/router.md](references/router.md).
+- Intensité d'intervention : [references/intensite-intervention.md](references/intensite-intervention.md).
 - Français par défaut : [references/fr-first.md](references/fr-first.md).
-- Patterns français inspirés de Boileau : [references/fr-patterns-boileau.md](references/fr-patterns-boileau.md).
-- Registre et anti-faux naturel : [references/register-gate.md](references/register-gate.md).
+- Patterns français : [references/fr-patterns-boileau.md](references/fr-patterns-boileau.md).
+- Registre : [references/register-gate.md](references/register-gate.md).
 - Passe voix finale : [references/voice-pass.md](references/voice-pass.md).
 - Typographie française : [references/typography-fr.md](references/typography-fr.md).
 - Protection technique : [references/technical-protection.md](references/technical-protection.md).
-- Frontieres de source Markdown / archives : [references/source-boundaries.md](references/source-boundaries.md).
-- Anglais / legacy : [references/en-patterns-legacy.md](references/en-patterns-legacy.md).
-- Sortie attendue : [references/output-contract.md](references/output-contract.md).
+- Frontières de source : [references/source-boundaries.md](references/source-boundaries.md).
+- Anglais : [references/en-patterns-legacy.md](references/en-patterns-legacy.md).
+- Contrat de sortie : [references/output-contract.md](references/output-contract.md).
 - Tests : [references/test-cases.md](references/test-cases.md).
-- Canaris techniques : [references/real-corpus-canaries.md](references/real-corpus-canaries.md).
+- Canaris : [references/real-corpus-canaries.md](references/real-corpus-canaries.md).
+- Sources et décisions : [references/source-map.md](references/source-map.md).
 
 ## Routage rapide
-- texte français final -> ouvrir `router.md`, `fr-first.md`, `register-gate.md`, `fr-patterns-boileau.md`, `typography-fr.md`, `voice-pass.md`.
-- texte avec échantillon de voix fourni -> ouvrir `router.md`, `register-gate.md`, `fr-patterns-boileau.md`, `voice-pass.md`.
-- document Markdown complet, brouillon éditorial, archive publiée, frontmatter ou plusieurs versions -> ouvrir `router.md` + `source-boundaries.md`, puis seulement les références de la route du bloc éditable.
-- texte anglais -> ouvrir `router.md` puis `en-patterns-legacy.md`.
-- texte technique, code, URL, JSON/YAML -> ouvrir `router.md` route technique + `technical-protection.md` + `typography-fr.md`; si la prose autour sonne IA, ouvrir aussi `fr-patterns-boileau.md` + `voice-pass.md` en gardant la protection technique prioritaire.
-- texte juridique, médical, financier ou sensible -> ouvrir `router.md` route sensible; correction minimale.
-- audit anti-tics demandé -> ouvrir `router.md`, `fr-patterns-boileau.md`, `output-contract.md`.
+
+- Toujours ouvrir `router.md` et `intensite-intervention.md`.
+- Français final : ajouter `fr-first.md`, `register-gate.md`, `fr-patterns-boileau.md`, `typography-fr.md`, `voice-pass.md`.
+- Échantillon de voix : ajouter `register-gate.md`, `fr-patterns-boileau.md`, `voice-pass.md`.
+- Document Markdown, archive, frontmatter, citation ou plusieurs versions : ouvrir d'abord `source-boundaries.md`.
+- Anglais : ouvrir `en-patterns-legacy.md`, sans typographie française.
+- Technique, code, URL, JSON/YAML ou analyse métier : ouvrir `technical-protection.md` et choisir `retouche_ciblee` par défaut.
+- Juridique, médical, financier, comptable ou sensible : route prudente et `retouche_ciblee`.
+- Audit demandé : `audit_seul`, sans réécriture implicite.
 
 ## Workflow
+
 1. Détecter la langue et le type de texte.
-2. Ouvrir le routeur et choisir la route : FR, anglais, technique, sensible, no-op ou audit anti-tics.
-3. Si l'entrée est une note complete ou une archive, identifier le bloc éditable avant toute réécriture.
-4. Choisir le registre cible et, si un échantillon est fourni, calibrer la voix avant de réécrire.
-5. Ouvrir les références utiles : FR-first + registre + patterns FR + typographie + voix finale si français; legacy anglais si anglais.
-6. Diagnostiquer les 3 à 8 marqueurs IA les plus coûteux.
-7. Réécrire en préservant le sens, la hiérarchie des idées et la voix.
-8. Faire la passe finale : "qu'est-ce qui sonne encore IA ou forcé ?"
-9. Ajuster une dernière fois.
-10. Retourner le texte réécrit puis un diagnostic bref.
+2. Isoler le bloc éditable si la source contient plusieurs rôles.
+3. Choisir la route de contexte.
+4. Choisir l'intensité : `no_op`, `retouche_ciblee`, `reecriture_structurelle` ou `audit_seul`.
+5. Choisir le registre et calibrer l'échantillon de voix s'il existe.
+6. Diagnostiquer de 0 à 5 marqueurs réellement présents. Zéro est valide.
+7. Préserver la couverture sémantique et les zones protégées.
+8. Modifier la plus petite surface utile, par soustraction ou remplacement avant tout ajout.
+9. Faire une passe voix, puis une seconde passe soustractive.
+10. Appliquer les gates de sens, densité, formatage, tokens et typographie.
+11. Retourner le texte final, puis un diagnostic bref seulement s'il est utile ou demandé.
 
-## Garde-fous
-- Lire seulement `SKILL.md` ne compte pas comme usage complet de la skill : ouvrir les references minimales de la route choisie.
-- Le sens prime sur le style.
-- La précision prime sur le "naturel".
-- Le registre doit être cohérent de bout en bout.
-- Les exemples concrets remplacent les adjectifs vagues seulement s'ils sont déjà présents ou fournis.
-- La typographie FR ne doit pas casser Markdown, code, slugs, URLs, commandes ou contenu volontairement ASCII.
-- Les termes système hybrides (`payload`, `node`, `retry`, `lead`, noms de tables, fonctions, flags) ne se traduisent pas s'ils font partie du contrat technique.
-- Les listes de commandes, options, capacités ou endpoints ne doivent pas être résumées si l'exhaustivité sert le diagnostic.
-- Les textes juridiques, médicaux, financiers ou sensibles passent en mode prudent : diagnostic et corrections minimales, jamais reformulation agressive.
-- Un texte déjà naturel peut rester presque inchangé; la skill n'a pas à modifier pour prouver qu'elle travaille.
-- Un document Markdown complet n'est pas un texte à humaniser en bloc : frontmatter, notes éditoriales, scores, archives, tâches et versions publiées sont des sources protégées sauf demande explicite.
-- Un pattern visible n'est pas un tic tant qu'il remplit une fonction : contraste, progression, souffle, mémoire, hook, précision ou voix d'auteur.
-- Le score anti-tics est un outil d'audit optionnel, jamais un objectif visible par défaut.
-- Le diagnostic ne doit annoncer des comptages, pourcentages, nombres de passes ou comparaisons avant/après que s'ils ont été réellement vérifiés.
-- En cas de doute sur le registre, garder un français sobre et direct.
+## Gates bloquants
 
-## Sortie obligatoire
-- `references_ouvertes`, `module_route`, `etape_pipeline_en_cours`, `sortie_finale_autorisee`, `registre_cible`, `marqueurs_detectes`, `texte_rewrite`, `passe_finale`, `changements_principaux`
+- Le sens, les réserves et les conditions restent stables.
+- Aucun fait, exemple, bénéfice ou contexte n'est ajouté.
+- Aucun token, item de liste ou élément source protégé n'est perdu.
+- Aucun paragraphe déjà naturel n'est réécrit sans raison.
+- En `retouche_ciblee`, l'expansion mesurée au-delà de 5 % déclenche une compression; au-delà de 10 %, la version est refusée sans raison autorisée.
+- Aucun nouveau gras, intertitre, liste ou label décoratif.
+- Aucune occurrence de `—` dans la prose finale française hors zone source exacte.
+- Aucun `–` ou `--` utilisé pour contourner le gate dans une incise.
+- Les champs internes de workflow ne sont pas affichés comme résultat utilisateur.
+
+## État interne obligatoire
+
+Maintenir sans l'imprimer par défaut :
+- `references_ouvertes`;
+- `route_contexte`;
+- `intensite_intervention`;
+- `etape_pipeline_en_cours`;
+- `sortie_finale_autorisee`;
+- `registre_cible`;
+- `marqueurs_detectes`;
+- `couverture_semantique_verifiee`;
+- `controle_densite`;
+- `gate_typographique`.
+
+## Réponse utilisateur
+
+Suivre [references/output-contract.md](references/output-contract.md). Les états internes ne deviennent visibles que si un schéma structuré les exige.
