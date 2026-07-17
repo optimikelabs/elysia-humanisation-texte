@@ -1,107 +1,109 @@
-# Routeur de decision
+# Routeur de décision
 
 ## But
-Choisir la bonne route avant de réécrire. Humaniser n'est pas toujours modifier beaucoup.
 
-## Route document Markdown / archive
-Utiliser si l'entrée contient du frontmatter, des sections Markdown, plusieurs versions, une trace publiee, une citation ou un bloc source.
+Choisir le bon contexte, puis la bonne intensité avant de réécrire. Humaniser n'est pas toujours modifier beaucoup.
 
-Référence minimale :
-- `source-boundaries.md`
+Ouvrir aussi `intensite-intervention.md`. Le contexte et l'intensité sont deux décisions distinctes.
+
+## Étape 0 : frontière de source
+
+Utiliser `source-boundaries.md` si l'entrée contient du frontmatter, plusieurs versions, une trace publiée, une citation, une transcription, un bloc source ou des métadonnées éditoriales.
 
 Règles :
-- isoler le bloc réellement éditable avant d'appliquer une route de style;
-- préserver frontmatter, notes éditoriales, scores, archives, tâches, URLs et traces de publication;
-- si le bloc éditable est un post social français, poursuivre avec `register-gate.md`, `fr-patterns-boileau.md`, `voice-pass.md` et `typography-fr.md`;
-- si le bloc contient des tokens techniques, ouvrir aussi `technical-protection.md`;
-- si la cible éditable reste ambiguë, faire un diagnostic court plutôt qu'une réécriture globale.
+- isoler le bloc réellement éditable avant toute route de style;
+- préserver les zones source et les preuves exactes;
+- si la cible reste ambiguë, faire un diagnostic court plutôt qu'une réécriture globale.
 
-Sortie autorisée : oui seulement sur le bloc éditable; non pour une réécriture globale de la note.
+Sortie autorisée : seulement sur le bloc éditable identifié.
 
-## Route FR standard
+## Étape 1 : route de contexte
+
+### Route FR standard
+
 Utiliser si le texte est majoritairement français et destiné à être lu par un humain.
 
 Références minimales :
-- `fr-first.md`
-- `register-gate.md`
-- `fr-patterns-boileau.md`
-- `typography-fr.md`
-- `voice-pass.md`
+- `fr-first.md`;
+- `register-gate.md`;
+- `fr-patterns-boileau.md`;
+- `typography-fr.md`;
+- `voice-pass.md`.
 
-Sortie autorisée : oui, si le sens et le registre sont clairs.
+### Route anglais
 
-## Route anglais
 Utiliser si le texte est majoritairement anglais ou si l'utilisateur demande explicitement l'anglais.
 
 Référence minimale :
-- `en-patterns-legacy.md`
+- `en-patterns-legacy.md`.
 
-Sortie autorisée : oui, sans appliquer les règles typographiques françaises.
+Ne pas appliquer les règles typographiques françaises.
 
-## Route échantillon de voix
-Utiliser si l'utilisateur fournit un extrait de sa voix, d'une marque ou d'un auteur à imiter.
+### Route technique
+
+Utiliser si le texte contient code, commandes, URLs, slugs, clés JSON/YAML, Markdown sensible, données, procédure, documentation produit ou termes métier précis.
 
 Références minimales :
-- `register-gate.md`
-- `fr-patterns-boileau.md`
-- `voice-pass.md`
+- `technical-protection.md`;
+- `typography-fr.md` si la prose finale est française.
+
+Références complémentaires si la prose autour des tokens sonne IA :
+- `fr-patterns-boileau.md`;
+- `voice-pass.md`.
+
+Règles :
+- protéger le contrat technique avant le style;
+- considérer la neutralité, la précision et la concision comme une voix humaine valide;
+- humaniser seulement les phrases qui le nécessitent;
+- choisir `retouche_ciblee` par défaut;
+- appliquer les patterns anti-cadence uniquement à la prose autour des tokens.
+
+### Route sensible
+
+Utiliser si le texte touche au juridique, médical, financier, comptable, RH sensible, sécurité, conformité ou décision à risque.
+
+Règles :
+- préserver les formulations prudentes, réserves et conditions;
+- choisir `retouche_ciblee` par défaut;
+- ne pas rendre le texte plus affirmatif, plus simple ou plus chaleureux au prix du sens;
+- signaler toute reformulation susceptible de modifier l'interprétation.
+
+Sortie autorisée : seulement si la stabilité du sens est vérifiée.
+
+### Overlay échantillon de voix
+
+Utiliser si l'utilisateur fournit un extrait de sa voix, d'une marque ou d'un auteur.
+
+Références minimales :
+- `register-gate.md`;
+- `fr-patterns-boileau.md`;
+- `voice-pass.md`.
 
 Règles :
 - lire l'échantillon avant de réécrire;
-- calibrer le rythme, le niveau de vocabulaire, les transitions et les aspérités;
+- calibrer rythme, vocabulaire, transitions et aspérités;
 - remplacer les tics IA par les patterns de l'auteur, pas par un naturel générique;
-- ne pas copier les défauts qui nuisent au sens ou à la précision.
+- ne pas copier les défauts qui nuisent au sens;
+- ne pas utiliser l'échantillon pour justifier une expansion ou contourner les gates typographiques.
 
-Sortie autorisée : oui, si l'échantillon est assez représentatif pour guider la voix.
+Cet overlay complète une route de contexte, il ne la remplace pas.
 
-## Route technique
-Utiliser si le texte contient code, commandes, URLs, slugs, clés JSON/YAML, Markdown sensible ou termes métier précis.
+## Étape 2 : intensité
 
-Références minimales :
-- `technical-protection.md`
-- `typography-fr.md`
+Choisir dans `intensite-intervention.md` :
+- `no_op` si le texte fonctionne déjà;
+- `retouche_ciblee` par défaut;
+- `reecriture_structurelle` seulement si un défaut systémique est nommé;
+- `audit_seul` si aucune réécriture n'est demandée.
 
-Références complémentaires si la prose autour des tokens sonne IA :
-- `fr-patterns-boileau.md`
-- `voice-pass.md`
+## Arbitrage
 
-Règles :
-- préserver les blocs techniques;
-- ne pas corriger la typographie dans le code, les URLs, les slugs et les clés;
-- garder le jargon métier quand il est exact;
-- garder les termes système hybrides quand ils nomment un objet réel du système;
-- humaniser seulement les phrases d'explication.
-- appliquer les patterns anti-cadence seulement aux phrases autour des tokens; `technical-protection.md` prime en cas de conflit.
+En cas de conflit :
+1. frontière de source;
+2. stabilité du sens et prudence;
+3. protection technique;
+4. intensité minimale utile;
+5. registre et voix;
+6. finition typographique.
 
-Sortie autorisée : oui, avec prudence.
-
-## Route sensible
-Utiliser si le texte touche au juridique, médical, financier, RH sensible, sécurité, conformité ou décision à risque.
-
-Règles :
-- préserver les formulations prudentes;
-- signaler toute reformulation qui pourrait changer le sens;
-- préférer un diagnostic et des corrections minimales;
-- ne pas rendre le texte plus affirmatif seulement pour qu'il sonne humain.
-
-Sortie autorisée : seulement si le sens reste strictement stable.
-
-## Route no-op
-Utiliser si le texte est déjà naturel, précis et adapté à son contexte.
-
-Règles :
-- ne pas réécrire pour réécrire;
-- signaler brièvement que les changements seraient cosmétiques;
-- proposer au maximum 1 ou 2 micro-ajustements.
-
-Sortie autorisée : oui, mais la meilleure sortie peut être quasi inchangée.
-
-## Route audit anti-tics
-Utiliser si l'utilisateur demande explicitement un audit, un score, une détection de tics IA, ou si le texte est long et visiblement généré.
-
-Règles :
-- le score reste optionnel et diagnostic;
-- ne jamais promettre qu'un texte devient indétectable;
-- utiliser les patterns externes comme inspiration, pas comme second canon.
-
-Sortie autorisée : oui pour un diagnostic; réécriture seulement si demandée ou utile.
+En cas de doute, choisir `retouche_ciblee`.

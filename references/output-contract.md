@@ -1,50 +1,68 @@
 # Contrat de sortie
 
-## Format normal
+## État d'exécution interne
 
-```text
-registre_cible: ...
-marqueurs_detectes:
-- ...
+Les champs suivants servent à stabiliser le workflow. Ils ne doivent pas être affichés par défaut :
+- `references_ouvertes`;
+- `module_route`;
+- `route_contexte`;
+- `intensite_intervention`;
+- `source_boundary` si nécessaire;
+- `etape_pipeline_en_cours`;
+- `sortie_finale_autorisee`;
+- `registre_cible`;
+- `marqueurs_detectes`;
+- `couverture_semantique_verifiee`;
+- `controle_densite`;
+- `gate_typographique`;
+- `expansion_reason` seulement si une expansion exceptionnelle est conservée.
+- `edit_ledger` seulement si une sortie structurée ou une évaluation l'exige.
 
-texte_rewrite:
-...
+Un champ interne n'est pas un bloc à imprimer dans la réponse utilisateur.
 
-passe_finale:
-...
+## Réponse utilisateur par défaut
 
-changements_principaux:
-- ...
-```
+1. Donner le texte réécrit en premier.
+2. Ajouter ensuite, seulement si utile ou demandé, un diagnostic bref de 0 à 5 changements importants.
+3. Ne pas afficher de labels comme `texte_rewrite`, `passe_finale` ou `marqueurs_detectes` sauf demande de sortie structurée.
 
-## Champs internes possibles
+## Format texte seul
 
-Utiliser seulement si utile :
-- `route`: FR standard, anglais, technique, sensible, no-op, audit anti-tics.
-- `source_boundary`: bloc éditable, zones protégées et statut source si l'entrée est une note complete ou une archive.
-- `sortie_finale_autorisee`: oui/non, avec raison courte si non.
-- `audit_slop`: diagnostic optionnel si l'utilisateur demande un audit ou si le texte est long et très marqué IA; peut utiliser en interne les axes direct, rythme, confiance lecteur, authenticité, densité.
+Si l'utilisateur veut uniquement le texte :
+- donner uniquement la version finale;
+- ne pas expliquer les changements;
+- ne pas ajouter de titre, bandeau ou note de traitement.
 
-Le score interne ne s'affiche pas par défaut. Il sert à stabiliser la passe finale, pas à juger l'auteur.
+## Route `no_op`
 
-## Format court
-Si l'utilisateur veut seulement le texte :
-- donner uniquement `texte_rewrite`;
-- ne pas expliquer les changements.
+Si le texte est déjà naturel :
+- le rendre inchangé ou presque;
+- dire brièvement, hors du texte final, que les autres changements seraient cosmétiques si un diagnostic est utile;
+- ne pas inventer de marqueurs pour remplir une liste.
 
 ## Diagnostic
+
 Le diagnostic doit rester utile :
-- 3 à 8 marqueurs maximum;
-- pas de liste exhaustive si elle ralentit la lecture;
-- nommer le risque principal : trop IA, trop soutenu, trop familier, trop vague, trop promotionnel, trop professoral.
-- ne pas afficher de score par défaut; si un score est utile, le présenter comme signal d'audit et non comme vérité.
-- ne pas annoncer de comptage, pourcentage, nombre de passes ou comparaison avant/après sans mesure réelle; préférer un diagnostic qualitatif si ce n'est pas mesuré.
-- ne pas insérer de note de traitement, bandeau `version éditée`, diagnostic ou métadonnée dans le texte final sauf demande explicite.
+- de 0 à 5 marqueurs maximum;
+- zéro marqueur est valide;
+- pas de liste exhaustive;
+- nommer le risque principal : trop artificiel, soutenu, familier, vague, promotionnel, professoral ou dilaté;
+- distinguer un signal isolé d'un cluster;
+- ne pas afficher de score par défaut;
+- ne pas annoncer de comptage, pourcentage, nombre de passes ou comparaison avant/après sans mesure réelle;
+- ne pas insérer le diagnostic dans le contenu publiable.
+
+## Sortie structurée
+
+Utiliser des champs explicites uniquement si l'utilisateur, un pipeline ou une autre skill le demande. Dans ce cas, suivre exactement le schéma demandé et ne pas exposer d'autres états internes.
 
 ## Interdits
-- Ne pas dire que le texte est "désormais parfaitement humain".
+
+- Ne pas dire que le texte est parfaitement humain.
 - Ne pas humilier le brouillon.
-- Ne pas ajouter des faits.
-- Ne pas inventer une scène, anecdote, durée, personne, lieu ou exemple pour rendre l'ouverture plus vivante.
+- Ne pas ajouter de faits, de preuve, de bénéfice ou de contexte.
+- Ne pas inventer une scène, anecdote, durée, personne, lieu ou exemple.
 - Ne pas changer l'intention commerciale, stratégique ou relationnelle sans le signaler.
-- Ne pas promettre qu'un texte devient indétectable par un détecteur IA.
+- Ne pas promettre qu'un texte devient indétectable.
+- Ne pas ajouter de gras, d'intertitres ou de listes sans fonction.
+- Ne pas afficher le protocole interne de la skill comme résultat utilisateur.

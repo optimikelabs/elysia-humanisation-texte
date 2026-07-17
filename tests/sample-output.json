@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "id": "modalites_comptables",
+      "output": "Le système peut bloquer l'export uniquement si le score dépasse 80 et si `review_required=true`. En dessous de ce seuil, le réviseur doit pouvoir ouvrir le dossier, consulter les pièces et décider s'il maintient l'alerte. Le score ne constitue pas une preuve de fraude et ne doit jamais être présenté comme tel."
+    },
+    {
+      "id": "diff_minimal_blocs",
+      "output": "Le moteur lit le FEC, le grand livre et la balance générale. Chaque écriture conserve sa date, son journal, son numéro de compte, sa référence de pièce et ses montants débit-crédit.\n\nLa solution aide les professionnels à prioriser les contrôles.\n\nLe score classe les écritures à vérifier. Il ne constitue pas une preuve de fraude et ne remplace ni les pièces justificatives ni le jugement du réviseur."
+    },
+    {
+      "id": "formulation_metier",
+      "output": "La solution automatise une partie du tri afin que le professionnel concentre son temps sur les contrôles à plus forte valeur ajoutée. Les résultats peuvent être exportés avec leur priorité, le commentaire du réviseur et leur statut de traitement."
+    },
+    {
+      "id": "workflow_tokens",
+      "output": "Un node `Function · Validate Rewrites` après `Parse Agent Output` compare le lead généré au seed quand `rewrite_lead=false`, recalcule le hash de chaque phrase d'ancre et vérifie qu'il diffère de la source. Il bloque aussi les motifs interdits, une URL manquante ou plus d'un lien par paragraphe, puis renvoie `needs_retry=true` si un test échoue. La boucle incrémente `retry_count` et revient vers `Agent Linker` tant que `retry_count < 3`."
+    },
+    {
+      "id": "expansion_grammaticale",
+      "output": "L'export est possible après la revue. Sinon, il reste bloqué. Le score est indicatif, jamais une preuve."
+    }
+  ]
+}
